@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:focusableInTouchMode="true"
+    android:padding="16dp">
+
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_page_title"
+        android:textColor="@color/sk_black" />
+
+    <com.ardurasolutions.safekiddo.proto.view.EditTextHv
+        android:id="@+id/editTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/sk_black"
+        android:maxLines="4"
+        android:scrollbars="vertical" />
+
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_page_url"
+        android:textColor="@color/sk_black"
+        android:layout_marginTop="10dp" />
+
+    <com.ardurasolutions.safekiddo.proto.view.EditTextHv
+        android:id="@+id/editURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@color/sk_black"
+        android:maxLines="4"
+        android:scrollbars="vertical" />
+
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_page_date"
+        android:textColor="@color/sk_black"
+        android:layout_marginTop="10dp" />
+
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/sk_black"
+        android:textSize="19sp" />
+
+</LinearLayout>

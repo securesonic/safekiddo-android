@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <attr name="marked" format="boolean" />
+    <declare-styleable name="CheckableLinearLayout">
+        <attr name="marked" />
+    </declare-styleable>
+    
+    <declare-styleable name="TextViewHv">
+		<attr name="font" format="integer">
+			<enum name="thin" value="0" />
+			<enum name="light" value="1"/>
+			<enum name="normal" value="2"/>
+			<enum name="bold" value="3"/>
+		</attr>
+	</declare-styleable>
+</resources>

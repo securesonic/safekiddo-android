@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <ScrollView
+        android:layout_width="@dimen/max_width"
+        android:layout_height="match_parent" 
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/bottomButtons">
+        
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:orientation="vertical">
+	
+	        <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+	            style="@style/Text_Auth_Head"
+	            android:id="@+id/textView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/label_da_info"
+	            android:layout_marginTop="@dimen/auth_header_top_padd" />
+	        
+	    </LinearLayout>
+	    
+    </ScrollView>
+    
+    <View 
+        android:background="@drawable/auth_divider_bg"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottomButtons"/>
+    
+    <RelativeLayout 
+        android:id="@+id/bottomButtons"
+         android:layout_width="@dimen/max_width"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:paddingBottom="@dimen/auth_bottom_buttons_padd_bottom"
+         android:paddingTop="@dimen/auth_bottom_buttons_padd_top"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true">
+        
+        <com.ardurasolutions.safekiddo.proto.view.ButtonHv
+            style="@style/Auth_Bottom_Button.Left"
+            android:id="@+id/buttonLeft" />
+        
+        <com.ardurasolutions.safekiddo.proto.view.ButtonHv
+            style="@style/Auth_Bottom_Button.Right"
+            android:id="@+id/buttonRight" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

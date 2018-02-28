@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+   	android:layout_height="match_parent"
+   	android:orientation="vertical">
+   	
+    <ScrollView 
+        android:layout_width="match_parent"
+   		android:layout_height="match_parent"
+   		android:layout_above="@+id/bottomButtons">
+		
+		    <LinearLayout
+		        android:layout_width="@dimen/max_width"
+		        android:layout_height="wrap_content" 
+		        android:gravity="center_vertical"
+		        android:layout_gravity="center_horizontal"
+		        android:orientation="vertical">
+		
+		        <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+		            style="@style/Text_Auth_Head"
+		            android:id="@+id/textView1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_select_child_profile"
+		            android:layout_marginBottom="@dimen/auth_header_bottom_padd"
+		            android:layout_marginTop="@dimen/auth_header_top_padd" />
+		            
+	            <RadioGroup
+	                android:id="@+id/profileRadios"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content">
+	
+	            </RadioGroup>
+		
+	            <LinearLayout
+	                android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:layout_marginBottom="15dp"
+		            android:layout_marginTop="30dp">
+		            
+	                <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+			            android:layout_width="0dp"
+			            android:layout_height="wrap_content"
+			            android:text="@string/label_refresh_child_list"
+			            android:gravity="center_vertical"
+			            android:textColor="@color/sk_white"
+			            android:textSize="16sp"
+			            android:layout_weight="1" />
+		                
+	                <ImageView
+	                    android:id="@+id/refreshList"
+	                    android:layout_width="wrap_content"
+		            	android:layout_height="match_parent"
+	                    android:src="@drawable/ic_action_refresh_circe"
+	                    android:scaleType="centerInside"
+	                    android:paddingLeft="5dp"
+	                    android:paddingRight="5dp" 
+	                    android:contentDescription="@string/app_name"
+	                    android:background="@drawable/browser_menu_item_bg"
+	                    android:layout_marginRight="5dp" />
+	                
+	            </LinearLayout>
+		        
+		        
+		        <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+		            android:id="@+id/textView2"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_select_child_profile_extra"
+		            android:textSize="16sp"
+		            android:textColor="@color/sk_white"
+		            android:paddingBottom="@dimen/auth_header_top_padd" />
+		
+		    </LinearLayout>
+	
+	</ScrollView>
+	
+    <View 
+        android:background="@drawable/auth_divider_bg"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottomButtons"/>
+	
+    <RelativeLayout 
+        android:id="@+id/bottomButtons"
+        android:layout_width="@dimen/max_width"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/auth_bottom_buttons_padd_bottom"
+        android:paddingTop="@dimen/auth_bottom_buttons_padd_top"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        
+        <com.ardurasolutions.safekiddo.proto.view.ButtonHv
+            style="@style/Auth_Bottom_Button.Left"
+            android:id="@+id/buttonLeft"
+            android:visibility="gone" />
+        
+        <com.ardurasolutions.safekiddo.proto.view.ButtonHv
+            style="@style/Auth_Bottom_Button.Right"
+            android:id="@+id/buttonRight" />
+
+    </RelativeLayout>
+	
+	<RelativeLayout 
+	    android:id="@+id/progressOverlay"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:clickable="true"
+	    android:background="@color/sk_black_alpha"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:visibility="gone">
+	
+	    <com.ardurasolutions.safekiddo.proto.view.CircleProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+	    
+	</RelativeLayout>
+</RelativeLayout>

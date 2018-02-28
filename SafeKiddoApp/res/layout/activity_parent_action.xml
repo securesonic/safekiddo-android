@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+   	android:layout_height="match_parent"
+   	android:orientation="vertical">
+   	
+    <ScrollView 
+        android:layout_width="match_parent"
+   		android:layout_height="match_parent"
+   		android:layout_above="@+id/bottomButtons">
+		
+		    <LinearLayout
+		        android:layout_width="@dimen/max_width"
+		        android:layout_height="wrap_content" 
+		        android:gravity="center_vertical"
+		        android:layout_gravity="center_horizontal"
+		        android:orientation="vertical">
+
+		        <ImageView
+		            android:id="@+id/imageView1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="50dp"
+		            android:src="@drawable/sk_logo_white_new"
+		            android:layout_marginTop="@dimen/auth_header_top_padd"
+		            android:layout_marginBottom="@dimen/auth_header_bottom_padd"
+		            android:contentDescription="@string/app_name"/>
+
+		        <ImageView
+		            android:id="@+id/imageView2"
+		            android:layout_width="match_parent"
+		            android:layout_height="60dp"
+		            android:src="@drawable/sk_attention_icon"
+		            android:contentDescription="@string/app_name"
+		            android:layout_marginTop="@dimen/auth_header_top_padd" />
+		        
+		        <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+		            android:id="@+id/textView1a"
+		            style="@style/Text_Auth_Head"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="15dp"
+		            android:gravity="center"
+		            android:text="@string/label_need_config"
+		            android:textSize="@dimen/user_action_head_text_size"
+		            android:paddingBottom="@dimen/auth_header_bottom_padd" />
+		
+		        <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+		            style="@style/Text_Auth_Head"
+		            android:id="@+id/textView1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/label_not_loget_info"
+		            android:layout_marginBottom="@dimen/auth_header_bottom_padd"
+		            android:layout_marginTop="15dp"
+		            android:gravity="left"
+		            android:textSize="@dimen/user_action_body_text_size" />
+		            
+		    </LinearLayout>
+	
+	</ScrollView>
+	
+    <View 
+        android:background="@drawable/auth_divider_bg"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottomButtons"/>
+	
+    <RelativeLayout 
+        android:id="@+id/bottomButtons"
+        android:layout_width="@dimen/max_width"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/auth_bottom_buttons_padd_bottom"
+        android:paddingTop="@dimen/auth_bottom_buttons_padd_top"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        
+        <com.ardurasolutions.safekiddo.proto.view.ButtonHv
+            style="@style/Auth_Bottom_Button.Right"
+            android:id="@+id/buttonRight" />
+
+    </RelativeLayout>
+	
+	<RelativeLayout 
+	    android:id="@+id/progressOverlay"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:clickable="true"
+	    android:background="@color/sk_black_alpha"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:visibility="gone">
+	
+	    <com.ardurasolutions.safekiddo.proto.view.CircleProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+	    
+	</RelativeLayout>
+</RelativeLayout>

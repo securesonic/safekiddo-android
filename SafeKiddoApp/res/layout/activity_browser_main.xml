@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:focusableInTouchMode="true">
+    
+    <FrameLayout
+        android:id="@+id/webFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/overlayAll"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:background="@color/sk_blue"
+    	android:gravity="center"
+    	android:visibility="gone">
+
+        <TextView
+            android:id="@+id/overlayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="21sp"
+            android:textColor="@color/sk_white" />
+        
+        <TextView
+            android:id="@+id/overlayDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/overlayTitle"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:textColor="@color/sk_white"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            style="@style/Auth_Button.White"
+            android:id="@+id/overlayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/overlayDesc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/tabSwitch"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:background="@color/sk_white"
+    	android:gravity="center"
+    	android:visibility="gone"
+    	android:clickable="true">
+
+        <GridView
+            android:id="@+id/tabSwitchList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tabSwitchListDiv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:cacheColorHint="#00000000"
+            android:numColumns="@integer/tab_switcher_cols"
+            android:verticalSpacing="@dimen/tab_switcher_divider_size"
+            android:horizontalSpacing="@dimen/tab_switcher_divider_size"
+            android:background="#22000000"
+            android:padding="@dimen/tab_switcher_divider_size"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay" />
+        
+        <View 
+            android:id="@+id/tabSwitchListDiv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/tabSwitchNewTab"
+            android:background="@color/sk_gray2" />
+        
+        <LinearLayout
+            android:id="@+id/tabSwitchNewTab"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:layout_alignParentBottom="true"
+		    android:layout_alignParentLeft="true"
+		    android:background="@drawable/browser_menu_item_bg"
+		    android:clickable="true">
+	        
+            <TextView
+		        android:id="@+id/tabSwitchNewTabLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/label_open_page"
+		        android:padding="5dp"
+		        android:textSize="17sp"
+		        android:textColor="@color/sk_black"
+		        android:gravity="center"
+		        android:drawableLeft="@drawable/ic_browser_window_plus_full"
+		        android:drawablePadding="10dp" />
+            
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

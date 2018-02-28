@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<color name="launcher_window_bg">#FF000000</color>
+	<color name="window_bg">#FFFFFFFF</color>
+	
+	<color name="sk_blue">#FF0095D9</color>
+	<color name="sk_blue_dark">#FF2275B2</color>
+	<color name="sk_blue_dark2">#FF115477</color>
+	<color name="sk_blue_dark3">#FF27465A</color>
+	<color name="sk_orange">#FFDF5F22</color>
+	<color name="sk_white">#FFFFFFFF</color>
+	<color name="sk_white_alpha">#77FFFFFF</color>
+	<color name="sk_white_alpha2">#44FFFFFF</color>
+	<color name="sk_white_dark">#FFE8E8E8</color>
+	<color name="sk_black">#FF000000</color>
+	<color name="sk_black_alpha">#99000000</color>
+	<color name="sk_gray1">#FF5F7583</color>
+	<color name="sk_gray2">#FFA6A6A6</color>
+	<color name="sk_gray3">#FF999999</color>
+	<color name="sk_red">#FFFF0000</color>
+	<color name="sk_divider">#FFEFEFEF</color>
+	
+	<color name="sk_menu_sel">#99CCCCCC</color>
+	<color name="sk_menu_disabled">#FFB5B5B5</color>
+	
+	<color name="sk_desktop_remove_box_grad">#77000000</color>
+	<color name="sk_desktop_remove_box_grad_active1">#77ff0000</color>
+	<color name="sk_desktop_remove_box_grad_active2">#00000000</color>
+	
+	<integer-array name="sk_colors">
+        <item>@color/sk_progress1</item>
+        <item>@color/sk_progress2</item>
+        <item>@color/sk_progress3</item>
+        <item>@color/sk_progress4</item>
+        <item>@color/sk_progress5</item>
+    </integer-array>
+    
+    <color name="sk_progress1">#FF00AFFF</color>
+    <color name="sk_progress2">#FF30BEFF</color>
+    <color name="sk_progress3">#FF75D4FF</color>
+    <color name="sk_progress4">#FFB3E7FF</color>
+    <color name="sk_progress5">#FFDBF4FF</color>
+</resources> 

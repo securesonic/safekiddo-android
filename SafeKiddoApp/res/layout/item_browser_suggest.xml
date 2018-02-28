@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TwoLineListItem xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:minHeight="?android:attr/listPreferredItemHeight"
+	android:mode="twoLine"
+	android:background="@drawable/suggest_menu_item_bg">
+
+	<com.ardurasolutions.safekiddo.proto.view.TextViewHv android:id="@android:id/text1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="18sp"
+		android:textColor="@color/sk_black"
+		android:singleLine="true"
+		android:ellipsize="end"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:paddingTop="10dp"
+		android:paddingBottom="3dp"
+	/>
+		
+	<com.ardurasolutions.safekiddo.proto.view.TextViewHv android:id="@android:id/text2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@android:id/text1"
+		android:layout_alignStart="@android:id/text1"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:textSize="12sp"
+		android:textColor="@color/sk_black_alpha"
+		android:singleLine="true"
+		android:ellipsize="end"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:paddingTop="0dp"
+		android:paddingBottom="10dp"
+	/>
+
+</TwoLineListItem>

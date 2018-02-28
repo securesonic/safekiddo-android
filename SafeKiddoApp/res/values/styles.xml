@@ -1,0 +1,229 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    
+    <style name="AppTheme_Desktop" parent="@android:style/Theme.Wallpaper.NoTitleBar">
+        
+    </style>
+    
+    <style name="AppTheme_Transparent" parent="android:Theme">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	
+    <style name="AppTheme_Auth" parent="@android:style/Theme.Light.NoTitleBar">
+		<item name="android:windowBackground">@color/sk_blue</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	
+    <style name="AppTheme_BlackBg" parent="@android:style/Theme.Light.NoTitleBar">
+		<item name="android:windowBackground">@color/sk_black</item>
+	</style>
+    <style name="AppTheme_BlackBg.NoTitle" parent="@android:style/Theme.Light.NoTitleBar">
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	
+    <style name="AppTheme_WhiteBg" parent="@style/Theme.AppCompat.Light">
+		<item name="android:windowBackground">@color/sk_white</item>
+	</style>
+    <style name="AppTheme_WhiteBg.NoTitle" parent="@android:style/Theme.Light.NoTitleBar">
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	
+    <style name="AppTheme_NoTitle" parent="@style/Theme.AppCompat.Light.NoActionBar">
+		<item name="android:windowBackground">@color/sk_white</item>
+	</style>
+	
+    <style name="AppTheme_NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/black_bg</item>
+    </style>
+	
+	<style name="AppTheme_BackArrow" parent="AppBaseTheme">
+		<item name="homeAsUpIndicator">@drawable/abc_ic_ab_back_holo_light</item>
+	</style>
+	<style name="AppTheme_BackArrow.WhiteBg" parent="AppTheme_BackArrow">
+		<item name="android:windowBackground">@color/sk_white</item>
+	</style>
+	
+	<style name="AppTheme_Toolbar">
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:minHeight">?attr/actionBarSize</item>
+	    <item name="android:background">@color/sk_blue</item>
+	    <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+	    <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+	</style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@color/window_bg</item>
+    </style>
+    
+    <style name="AppTheme_PinBtn">
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/sk_orange</item>
+        <item name="android:background">@drawable/white_ball_button</item>
+    </style>
+    
+    <style name="AppTheme_Radio_Check_Btn">
+        <item name="android:paddingLeft">@dimen/radio_padding_left</item>
+    </style>
+    
+    <style name="LauncherAppTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@color/launcher_window_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+    <style name="LauncherAppTheme_DesktopIcon">
+         <item name="android:layout_width">@dimen/launcher_desktop_bar_icon_size</item>
+         <item name="android:layout_height">@dimen/launcher_desktop_bar_icon_size</item>
+         <item name="android:clickable">true</item>
+<!--          <item name="android:padding">10dp</item>  -->
+<!--          <item name="android:layout_marginLeft">5dp</item>  -->
+<!--          <item name="android:layout_marginRight">5dp</item>  -->
+         <item name="android:layout_weight">1</item> 
+    </style>
+    
+    <style name="LauncherAppTheme_DesktopTextIcon">
+    	<item name="android:shadowColor">#99000000</item>
+		<item name="android:shadowDx">1</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">2</item>
+		<item name="android:textColor">#FFFFFFFF</item>
+		<item name="android:textSize">14sp</item>
+	</style>
+    
+    <style name="BrowserAppTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@color/window_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+    <style name="BrowserAppTheme_Dialog_Button">
+        <item name="android:background">@drawable/browser_dialog_button_bg</item>
+        <item name="android:textColor">@color/sk_white</item>
+    </style>
+    
+    <style name="Auth_Button">
+        <item name="android:layout_width">@dimen/max_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    
+    <style name="Auth_Button.White" parent="Auth_Button">
+        <item name="android:background">@drawable/button_white_bg</item>
+        <item name="android:textColor">@color/sk_orange</item>
+    </style>
+    
+    <style name="Auth_Button.Blue" parent="Auth_Button">
+        <item name="android:background">@drawable/button_blue_bg</item>
+        <item name="android:textColor">@color/sk_white</item>
+    </style>
+    
+    <style name="Auth_Button.Orange" parent="Auth_Button">
+        <item name="android:background">@color/sk_orange</item>
+        <item name="android:textColor">@color/sk_white</item>
+    </style>
+    
+    <style name="Auth_Bottom_Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:textColor">@color/sk_white</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:background">@drawable/button_blue_bg</item>
+        <item name="android:drawablePadding">0dp</item>
+    </style>
+    
+    <style name="Auth_Bottom_Button.Left" parent="Auth_Bottom_Button">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:drawableLeft">@drawable/ic_app_action_prev_bg</item>
+        <item name="android:text">@string/label_auth_back</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+    
+    <style name="Auth_Bottom_Button.Right" parent="Auth_Bottom_Button">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:drawableRight">@drawable/ic_app_action_next_orange_bg</item>
+        <item name="android:text">@string/label_auth_next</item>
+        <item name="android:background">@drawable/button_white_bg</item>
+        <item name="android:textColor">@color/sk_orange</item>
+        <item name="android:gravity">right|center</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingLeft">30dp</item>
+    </style>
+    
+    <style name="Text_Auth_Head">
+        <item name="android:textColor">@color/sk_white</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+    
+    <style name="Text_Settings_Header">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textSize">@dimen/settings_header_font_size</item>
+        <item name="android:background">@drawable/settings_header_bg</item>
+        <item name="android:textColor">@color/sk_blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+<!--     <style name="Text_Settings_Header.First"> -->
+<!--         <item name="android:paddingTop">16dp</item> -->
+<!--     </style> -->
+    
+    <style name="Button_Browser_Bottom_Bar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/browser_menu_item_bg</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    
+    <style name="SKProgressBar" parent="SmoothProgressBar">
+        <item name="spb_stroke_separator_length">0dp</item>
+        <item name="spb_sections_count">4</item>
+        <item name="spb_speed">3.0</item>
+        <item name="spb_interpolator">spb_interpolator_linear</item>
+        <item name="spb_colors">@array/sk_colors</item>
+        <item name="spb_mirror_mode">true</item>
+        <item name="spb_reversed">true</item>
+        <item name="spb_generate_background_with_colors">false</item>
+        <item name="spb_gradients">false</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:maxHeight">2dp</item>
+        <item name="android:minHeight">2dp</item>
+    </style>
+    
+</resources>

@@ -1,0 +1,5 @@
+/bin
+/proguard/
+/ant.properties
+/build.xml
+/local.properties

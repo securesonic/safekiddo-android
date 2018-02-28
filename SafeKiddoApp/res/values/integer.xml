@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- used for default font -->
+    <integer name="default_font">@integer/normal</integer>
+    
+<!--     <integer name="thin">0</integer> -->
+<!--     <integer name="light">1</integer> -->
+    <integer name="normal">2</integer>
+    <integer name="tab_switcher_cols">1</integer>
+<!--     <integer name="bold">3</integer> -->
+</resources>

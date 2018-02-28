@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.ardurasolutions.safekiddo">
+    
+    <android.support.v7.widget.Toolbar  
+	    android:id="@+id/toolbar"
+	    style="@style/AppTheme_Toolbar"
+	    app:title="@string/label_parent_mode" />
+    
+    <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        style="@style/Text_Settings_Header"
+        android:text="@string/label_general" />
+
+    <LinearLayout
+        android:id="@+id/selectChildAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_item_height"
+        android:orientation="vertical" 
+        android:padding="@dimen/settings_option_padd"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_assign_child_account"
+            android:textSize="@dimen/settings_option_font_size"
+            android:textColor="@color/sk_black" />
+
+        <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+            android:id="@+id/childAccountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/settings_suboption_font_size"
+            android:textColor="@color/sk_black_alpha" />
+
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/appsMang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_item_height"
+        android:text="@string/label_mng_apps"
+        android:textSize="@dimen/settings_option_font_size"
+        android:textColor="@color/sk_black"
+        android:padding="@dimen/settings_option_padd"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"
+        android:visibility="gone"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.CheckBoxHv
+        style="@style/AppTheme_Radio_Check_Btn"
+		android:id="@+id/useLauncher"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/settings_item_height"
+		android:text="@string/label_use_launcher"
+		android:button="@null"
+		android:drawableRight="@drawable/checkbox_button2"
+		android:textColor="@color/sk_black"
+		android:textSize="16sp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:background="@drawable/browser_menu_item_bg"
+		android:visibility="gone" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"
+        android:visibility="gone"/>
+
+     <com.ardurasolutions.safekiddo.proto.view.CheckBoxHv
+        style="@style/AppTheme_Radio_Check_Btn"
+		android:id="@+id/useMoreSecure"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="@dimen/settings_item_height"
+		android:text="@string/label_more_secure"
+		android:button="@null"
+		
+		android:textColor="@color/sk_black"
+		android:textSize="16sp"
+		android:background="@drawable/browser_menu_item_bg"
+		android:padding="10dp"
+		android:visibility="gone" />
+     <!-- android:drawableRight="@drawable/checkbox_button" -->
+        
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/itemLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_item_height"
+        android:text="@string/label_logout"
+        android:textSize="@dimen/settings_option_font_size"
+        android:textColor="@color/sk_black"
+        android:padding="@dimen/settings_option_padd"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"/>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"
+        android:visibility="gone"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/itemServices"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_item_height"
+        android:text="@string/label_my_services"
+        android:textSize="16sp"
+        android:textColor="@color/sk_black"
+        android:padding="10dp"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:visibility="gone" />
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        style="@style/Text_Settings_Header"
+        android:text="@string/label_info" />
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/itemVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_item_height"
+        android:text="@string/label_version"
+        android:textSize="@dimen/settings_option_font_size"
+        android:textColor="@color/sk_black"
+        android:padding="@dimen/settings_option_padd"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/itemTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_item_height"
+        android:text="@string/label_terms_of_service"
+        android:textSize="@dimen/settings_option_font_size"
+        android:textColor="@color/sk_black"
+        android:padding="@dimen/settings_option_padd"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/itemPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_item_height"
+        android:text="@string/label_privacy_policy"
+        android:textSize="@dimen/settings_option_font_size"
+        android:textColor="@color/sk_black"
+        android:padding="@dimen/settings_option_padd"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/itemPolicyCookies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_item_height"
+        android:text="@string/label_cookies_policy"
+        android:textSize="@dimen/settings_option_font_size"
+        android:textColor="@color/sk_black"
+        android:padding="@dimen/settings_option_padd"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/itemCopytight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_item_height"
+        android:text="@string/label_copyright"
+        android:textSize="@dimen/settings_option_font_size"
+        android:textColor="@color/sk_black"
+        android:padding="@dimen/settings_option_padd"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/itemLicenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settings_item_height"
+        android:text="@string/label_licenses"
+        android:textSize="@dimen/settings_option_font_size"
+        android:textColor="@color/sk_black"
+        android:padding="@dimen/settings_option_padd"
+        android:background="@drawable/browser_menu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sk_menu_sel"/>
+
+</LinearLayout>
+</ScrollView>
+    
+</LinearLayout>

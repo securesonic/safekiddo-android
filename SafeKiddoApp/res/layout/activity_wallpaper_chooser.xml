@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/label_set_wallpaper"
+        android:drawableLeft="@drawable/ic_action_accept"
+        android:drawablePadding="5dp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/white_trans_button_bg"
+        android:textColor="@color/sk_black"
+        android:onClick="handleSetWallpaper"
+        android:clickable="true" />
+    
+    <RelativeLayout 
+        android:id="@+id/progressOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:background="@color/sk_black_alpha">
+
+        <com.ardurasolutions.safekiddo.proto.view.CircleProgressBar
+            android:id="@+id/circleProgressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

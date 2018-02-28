@@ -1,0 +1,44 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+<!--     <dimen name="launcher_icon_size">64dp</dimen> -->
+<!--     <dimen name="launcher_desktop_icon_size">64dp</dimen> -->
+    <dimen name="launcher_desktop_bar_icon_size">60dp</dimen>
+    
+    <dimen name="browser_favs_tree_ident">20dp</dimen>
+    
+    <dimen name="max_width">390dp</dimen>
+    
+    <dimen name="auth_tab_height">100dp</dimen>
+    <dimen name="auth_bottom_buttons_padd_top">30dp</dimen>
+    <dimen name="auth_bottom_buttons_padd_bottom">30dp</dimen>
+    <dimen name="auth_tab_indicator_size">50dp</dimen>
+    <dimen name="auth_tab_indicator_text_size">27sp</dimen>
+    <dimen name="auth_header_top_padd">50dp</dimen>
+    <dimen name="auth_header_bottom_padd">50dp</dimen>
+
+    <dimen name="all_apps_icon_size">72dp</dimen>
+    <dimen name="all_apps_item_size">120dp</dimen>
+    <dimen name="all_apps_button_padding">15dp</dimen>
+    
+    <dimen name="desktop_fast_bar_icon_size">64dp</dimen>
+    <dimen name="desktop_fast_bar_item_size">80dp</dimen>
+    
+<!--     <dimen name="first_screen_padding">50dp</dimen> -->
+<!--     <dimen name="first_screen_bottom_margin">40dp</dimen> -->
+    <dimen name="first_screen_text_size">19sp</dimen>
+    <dimen name="first_screen_button_padd">40dp</dimen>
+    <dimen name="first_screen_button_size">180dp</dimen>
+    <dimen name="first_screen_logo_size">380dp</dimen>
+    
+    <dimen name="pin_pad_size">300dp</dimen>
+    <dimen name="pin_pad_padd1">40dp</dimen>
+    <dimen name="pin_pad_padd2">20dp</dimen>
+    <dimen name="pin_pad_grid_padd">15dp</dimen>
+    
+    <dimen name="user_action_head_text_size">27sp</dimen>
+    <dimen name="user_action_body_text_size">18sp</dimen>
+</resources>

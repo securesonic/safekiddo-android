@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+<!--         <layer-list> -->
+<!--             <item android:left="-10dp" android:top="-10dp" android:right="-10dp"> -->
+<!-- 		        <shape> -->
+<!-- 		            <solid android:color="#00000000" /> -->
+<!-- 		            <stroke android:width="4dp" android:color="@color/sk_orange"/> -->
+<!-- 		        </shape> -->
+<!-- 		    </item> -->
+<!--         </layer-list> -->
+		<color android:color="#00000000" />
+    </item>
+    <item>
+        <color android:color="#00000000" />
+    </item>
+</selector>

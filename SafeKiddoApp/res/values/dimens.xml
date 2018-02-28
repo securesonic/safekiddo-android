@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+<!--     <dimen name="activity_horizontal_margin">16dp</dimen> -->
+<!--     <dimen name="activity_vertical_margin">16dp</dimen> -->
+    
+<!--     <dimen name="launcher_icon_size">48dp</dimen> -->
+<!--     <dimen name="launcher_icon_padd">15dp</dimen> -->
+<!--     <dimen name="launcher_grid_padd">15dp</dimen> -->
+<!--     <dimen name="launcher_desktop_icon_size">48dp</dimen> -->
+    <dimen name="launcher_desktop_bar_icon_size">48dp</dimen>
+    
+<!--     <dimen name="launcher_top_bar_height">50dp</dimen> -->
+    
+    <dimen name="menu_width">290dp</dimen>
+    <dimen name="menu_apps_width">170dp</dimen>
+    
+    <dimen name="max_width">290dp</dimen>
+    <dimen name="settings_item_height">60dp</dimen>
+    
+    <dimen name="auth_tab_height">60dp</dimen>
+<!--     <dimen name="auth_tab_indicator">56dp</dimen> -->
+    <dimen name="auth_tab_indicator_size">35dp</dimen>
+    <dimen name="auth_tab_indicator_text_size">19sp</dimen>
+<!--     <dimen name="auth_button_size">130dp</dimen> -->
+<!--     <dimen name="auth_profile_box_size">180dp</dimen> -->
+    <dimen name="auth_bottom_buttons_padd_top">15dp</dimen>
+    <dimen name="auth_bottom_buttons_padd_bottom">15dp</dimen>
+    <dimen name="auth_header_top_padd">30dp</dimen>
+    <dimen name="auth_header_bottom_padd">30dp</dimen>
+    
+<!--     <dimen name="lock_screen_size">300dp</dimen> -->
+<!--     <dimen name="lock_screen_button_margin">10dp</dimen> -->
+    
+    <dimen name="radio_padding_left">0dp</dimen>
+    <dimen name="user_settings_icon_size">48dp</dimen>
+    
+    <dimen name="browser_favs_tree_ident">15dp</dimen>
+
+    <dimen name="all_apps_icon_size">48dp</dimen>
+    <dimen name="all_apps_list_icon_size">48dp</dimen>
+    <dimen name="all_apps_item_size">80dp</dimen>
+    <dimen name="all_apps_button_padding">5dp</dimen>
+    
+    <dimen name="desktop_fast_bar_icon_size">48dp</dimen>
+    <dimen name="desktop_fast_bar_item_size">60dp</dimen>
+    
+<!--     <dimen name="first_screen_padding">30dp</dimen> -->
+<!--     <dimen name="first_screen_bottom_margin">20dp</dimen> -->
+    <dimen name="first_screen_text_size">15sp</dimen>
+    <dimen name="first_screen_button_padd">20dp</dimen>
+    <dimen name="first_screen_button_size">130dp</dimen>
+    <dimen name="first_screen_logo_size">300dp</dimen>
+    
+<!--     <dimen name="pin_pad_max_size">300dp</dimen> -->
+    <dimen name="pin_pad_size">260dp</dimen>
+    <dimen name="pin_pad_padd1">20dp</dimen>
+    <dimen name="pin_pad_padd2">10dp</dimen>
+    <dimen name="pin_pad_grid_padd">15dp</dimen>
+    
+    <dimen name="user_action_head_text_size">23sp</dimen>
+    <dimen name="user_action_body_text_size">16sp</dimen>
+    
+    <!-- domyślny radius dla tła buttona i pola edit -->
+    <dimen name="default_round_corners">0dp</dimen>
+    
+    <dimen name="tab_switcher_divider_size">15dp</dimen>
+    <dimen name="tab_switcher_thumb_height">140dp</dimen>
+    
+    <dimen name="settings_header_font_size">14sp</dimen>
+    <dimen name="settings_option_font_size">16sp</dimen>
+    <dimen name="settings_suboption_font_size">14sp</dimen>
+    <dimen name="settings_option_padd">16dp</dimen>
+</resources>

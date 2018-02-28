@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ardurasolutions.safekiddo.proto.view.RadioButtonHv xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme_Radio_Check_Btn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:drawableLeft="@drawable/child"
+    android:drawablePadding="5dp"
+    android:drawableRight="@drawable/radio_checkbox"
+    android:button="@null"
+    android:background="@drawable/browser_menu_item_bg"
+    android:textColor="@color/sk_black"
+    android:textSize="@dimen/settings_option_font_size"
+    android:singleLine="true"
+    android:ellipsize="end" />

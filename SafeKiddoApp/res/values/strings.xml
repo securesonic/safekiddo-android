@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">SafeKiddo</string>
+    <string name="browser_app_name">SafeKiddo</string>
+    <string name="settings_app_name">SafeKiddo Ustawienia</string>
+    <string name="dev_app_name">SafeKiddo DEV</string>
+    
+    <string name="label_app_list">Lista aplikacji</string>
+    <string name="label_search_app">Szukaj aplikacji…</string>
+    <string name="label_next">Dalej</string>
+    <string name="label_auth_next">dalej</string>
+    <string name="label_back">Wstecz</string>
+    <string name="label_auth_back">wstecz</string>
+    <string name="label_add_to_favs">Dodaj do zakładek</string>
+    <string name="label_favs">Zakładki</string>
+    <string name="label_history">Historia</string>
+    <string name="label_settings">SafeKiddo - Ustawienia</string>
+    <string name="label_settings_browser">Ustawienia</string>
+    <string name="label_settings_select_profile">Wybierz konto dziecka</string>
+    <string name="label_settings_apps_mng">Lista dostępnych aplikacji</string>
+    <string name="label_ok">OK</string>
+    <string name="label_finish_auth">Uruchom</string>
+    <string name="label_cancel">Anuluj</string>
+    <string name="label_logout">Wyloguj i wyłącz ochronę SafeKiddo</string>
+    <string name="label_version">Wersja %s</string>
+    <string name="label_assign_child_account">Przypisz konto dziecka do urządzenia</string>
+    <string name="label_mng_apps">Zarządzaj dostępem do aplikacji</string>
+    <string name="label_clear_history">Wyczyść historię przeglądania</string>
+    <string name="label_clear_cookies">Czyść pliki cookie</string>
+    <string name="label_terms_of_service">Regulamin</string>
+    <string name="label_privacy_policy">Polityka prywatności</string>
+    <string name="label_clear_browser_history">Czyść historię przeglądania</string>
+    <string name="label_clear_cache">Czyść pamięć podręczną</string>
+    <string name="label_security_settings">Ustawienia bezpieczeństwa</string>
+    <string name="label_enable_all">Włącz wszystkie</string>
+    <string name="label_disable_all">Wyłącz wszystkie</string>
+    <string name="label_disable_browsers">Wyłącz przeglądarki internetowe</string>
+    <string name="label_pin_window_title">TRYB RODZICA</string>
+    <string name="label_pin_window_sub_title">Aby przejść dalej, podaj PIN</string>
+    <string name="label_create">Utwórz</string>
+    <string name="label_delete">Usuń</string>
+    <string name="label_new_folder">Nowy folder</string>
+    <string name="label_select_folder">Wybierz katalog dla zakładki</string>
+    <string name="label_label">Etykieta</string>
+    <string name="label_url" tools:ignore="Typos">Adres URL</string>
+    <string name="label_folder">Katalog</string>
+    <string name="label_folder_name">Nazwa katalogu</string>
+    <string name="label_select">Wybierz</string>
+    <string name="label_favs_title">Zakładki</string>
+    <string name="label_fav_title">Zakładka</string>
+    <string name="label_no_entrys">Brak elementów</string>
+    <string name="label_edit">Edytuj</string>
+    <string name="label_parent_mode">Tryb rodzica</string>
+    <string name="label_create_account">Załóż konto</string>
+    <string name="label_login">Zaloguj</string>
+    <string name="label_login_name">Login</string>
+    <string name="label_pass_name">Hasło</string>
+    <string name="label_login_title">Zaloguj się i uruchom SafeKiddo</string>
+    <string name="label_refresh_child_list">Jeżeli nie widzisz konta dziecka\npobierz ponownie listę kont</string>
+    <string name="label_http_auth_info">Strona wymaga uwierzytelnienia. Należy podać nazwę użytkownika oraz hasło.</string>
+    <string name="label_http_auth_title">Autoryzacja</string>
+    <string name="label_dnt">Wyślij żądanie „Bez śledzenia”</string>
+    <string name="label_clearing">CZYSZCZENIE</string>
+    <string name="label_rest_settings">POZOSTAŁE USTAWIENIA</string>
+    <string name="label_info">O SAFEKIDDO</string>
+    <string name="label_change_wallpaper">Tapety</string>
+    <string name="label_browser_geolocation">Geolokalizacja</string>
+    <string name="label_browser_geolocation_always_ask">Zawsze pytaj</string>
+    <string name="label_browser_geolocation_always_grant">Zezwalaj</string>
+    <string name="label_browser_geolocation_always_revoke">Odmawiaj</string>
+    <string name="label_browser_geolocation_grant">Zezwól</string>
+    <string name="label_browser_geolocation_revoke">Odmów</string>
+    <string name="label_browser_geolocation_dialog_title">Prośba o lokalizację</string>
+    <string name="label_browser_geolocation_dialog_msg">Strona prosi o informację o Twojej lokalizacji. Udzielić dostępu?</string>
+    <string name="label_page_blocked">Strona zablokowana</string>
+    <string name="label_general">OGÓLNE</string>
+    <string name="label_my_services">Twoje usługi</string>
+    <string name="label_copyright">\u00A9 Copyright by Ardura Solutions</string>
+    <string name="label_enter_url_or_search" tools:ignore="Typos">Wpisz adres strony lub wyszukaj</string>
+    <string name="label_root_directory">Zakładki SafeKiddo</string>
+    <string name="label_apply">Zastosuj</string>
+    <string name="label_logout_progress">Wylogowywanie…</string>
+    <string name="label_set_wallpaper">Ustaw tapetę</string>
+    <string name="label_not_loget_info">Do poprawnego działania SafeKiddo konieczne jest przeprowadzenie ponownej konfiguracji aplikacji na tym urządzeniu.</string>
+    <string name="label_cookies_policy">Polityka Cookies</string>
+    <string name="label_need_config">Wymagana konfiguracja</string>
+    <string name="label_nothing_selected">&lt;Nie wybrano&gt;</string>
+    <string name="label_licenses">Licencje open source</string>
+    <string name="label_warning">Ostrzeżenie</string>
+    <string name="label_unlock_browser_msg" status="to_improve">Odblokowywana jest przeglądarka internetowa. Spowoduje to zmniejszenie poziomu bezpieczeństwa.\n\nKontynuować?</string>
+    <string name="label_share">Udostępnij…</string>
+    <string name="label_open_page">Nowa karta</string>
+    <string name="label_empty_page">Pusta strona</string>
+    <string name="label_open_in_new_tab">Otwórz w nowej karcie</string>
+    <string name="label_copy_link_address" tools:ignore="Typos">Kopiuj adres linku</string>
+    <string name="label_save_image">Zapisz obrazek</string>
+    <string name="label_copy_image_url" tools:ignore="Typos">Kopiuj adres grafiki</string>
+    <string name="label_browser_type_desktop">Wersja na komputer</string>
+    <string name="label_browser_identyfication">Identyfikacja przeglądarki</string>
+    <string name="label_browser_identyfication_android">Na urządzenia mobilne</string>
+    <string name="label_browser_identyfication_desktop">Dla komputerów</string>
+    <string-array name="label_browser_identyfication_array">
+        <item>@string/label_browser_identyfication_android</item>
+        <item>@string/label_browser_identyfication_desktop</item>
+    </string-array>
+    <string name="label_browser_error_load_page">Błąd ładowania strony (%d)</string>
+    <string name="label_browser_error">Błąd</string>
+    <string name="label_enabled">Włączone</string>
+    <string name="label_disabled">Wyłączone</string>
+    <string name="label_browser_not_found" tools:ignore="Typos">Nie znaleziono strony&lt;br&gt;Wprowadź poprawny adres</string>
+    <string name="label_details">Szczegóły</string>
+    <string name="label_confirm_delete_history">Na pewno usunąć wybrany wpis z historii?</string>
+    <string name="label_page_title">Tytuł strony</string>
+    <string name="label_page_url" tools:ignore="Typos">Adres URL</string>
+    <string name="label_page_date">Data</string>
+    <string name="label_share_extra">Link udostępniony z aplikacji SafeKiddo</string>
+    
+    
+    <string name="label_slogan1">Zapewnij dziecku\nbezpieczeństwo w Internecie</string>
+    <string name="label_slogan1_desc">SafeKiddo pomoże Ci dobrać bezpieczne treści\ndo wieku Twojego dziecka</string>
+    <string name="label_slogan2">Kontroluj czas jaki dziecko\nspędza w Internecie</string>
+    <string name="label_slogan2_desc">Dzięki SafeKiddo możesz dowolnie ustawić\ngodziny korzystania z Internetu</string>
+    <string name="label_slogan3">Zarządzaj dostępem\ndo aplikacji</string>
+    <string name="label_slogan3_desc">Dowolnie definiuj, które gry i aplikacje mogą\nbyć uruchamiane przez Twoje dziecko</string>
+    
+    <string name="label_permission_broadcast_permission">Komunikaty SafeKiddo</string>
+    <string name="label_permission_broadcast_permission_desc">Otrzymywanie komunikatów SafeKiddo</string>
+    
+    <string name="label_1">1</string>
+    <string name="label_2">2</string>
+    <string name="label_3">3</string>
+    <string name="label_4">4</string>
+    
+    <string name="label_more_secure">Włącz dodatkową ochronę i zablokuj dostęp do sugerowanych przez SafeKiddo aplikacji.</string>
+    <string name="label_use_launcher">Włącz nakładkę SafeKiddo, aby zwiększyć bezpieczeństwo</string>
+    <string name="label_slogan_casesens">Bezpieczny Internet dla Twojego dziecka</string>
+    <string name="label_da_info">Dla zapewnienia najwyższego poziomu bezpieczeństwa konieczne jest nadanie aplikacji SafeKiddo uprawnień administratora urządzenia\n\nW następnym kroku wyraź zgodę na aktywację administratora urządzenia</string>
+    <string name="label_da_info_installed">Administrator urządzenia jest już zainstalowany\n\nPrzejdź do następnego kroku</string>
+    <string name="label_da_install_info">Instalacja administratora urządzenia</string>
+    <string name="label_da_disabling">Administrator urządzenia zostanie wyłączony. Kontynuować?</string>
+    <string name="label_select_child_profile">Wybierz konto SafeKiddo, którego ustawienia mają chronić dziecko korzystające z tego urządzenia</string>
+    <string name="label_select_child_profile_extra"><![CDATA[ Nowe konto dziecka możesz dodać na<br><a href="{URL1}"><b><font color="#FFFFFF">{URL2}</font></b></a> ]]></string>
+    <string name="label_final_1">Aplikacja SafeKiddo jest gotowa do ochrony twojego dziecka</string>
+    <string name="label_final_2">Kliknij \"Uruchom\" a następnie w kolejnym oknie zaznacz SafeKiddo i wybierz \"Zawsze\"</string>
+    
+    <string name="hint_login">E-mail</string>
+    <string name="hint_pass">Hasło</string>
+    
+    <string name="dialog_del_cookies_title">Usuwanie cookies</string>
+    <string name="dialog_del_cookies_msg">Na pewno usunąć wszystkie pliki cookies?</string>
+    <string name="dialog_del_history_title">Czyszczenie historii</string>
+    <string name="dialog_del_history_msg">Na pewno wyczyścić historię przeglądarki?</string>
+    <string name="dialog_logout_title">Wyloguj</string>
+    <string name="dialog_logout_msg">Na pewno wylogować?</string>
+    <string name="dialog_clear_history_title">Wyczyść historię</string>
+    <string name="dialog_clear_history_msg">Na pewno wyczyścić historię przeglądania?</string>
+    <string name="dialog_clear_history_item_title">Usuń element historii</string>
+    <string name="dialog_clear_history_item_msg">Na pewno usunąć wpis historii?</string>
+    <string name="dialog_clear_cache_title">Wyczyść pamięć podręczną</string>
+    <string name="dialog_clear_cache_msg">Na pewno wyczyścić pamięć podręczną przeglądarki?</string>
+    <string name="dialog_enableall_title">Włącz wszystkie aplikacje</string>
+    <string name="dialog_enableall_msg">Na pewno włączyć wszystkie aplikacje?\nZostaną odblokowane inne przeglądarki internetowe i urządzenie nie będzie w pełni chronione.</string>
+    
+    <string name="toast_cookies_cleared">Pliki cookie zostały wyczyszczone</string>
+    <string name="toast_history_cleared">Historia przeglądarki została wyczyszczona</string>
+    <string name="toast_cache_cleared">Pamięć podręczna została wyczyszczona</string>
+    <string name="toast_enter_login">Wpisz login</string>
+    <string name="toast_enter_pass">Wpisz hasło</string>
+    <string name="toast_auth_error">Błąd logowania. Sprawdź swoje dane</string>
+    <string name="toast_error_get_childs">Błąd pobierania elementów listy</string>
+    <string name="toast_select_child_profile">Wybierz profil dziecka</string>
+    <string name="toast_child_profile_not_online">Aby zmienić profil musisz być online</string>
+    <string name="toast_select_child_from_list">Wybierz dziecko z listy</string>
+    <string name="toast_net_error">Błąd połączenia!</string>
+    <string name="toast_max_devices">Masz już maksymalną liczbę urządzeń</string>
+    <string name="toast_auth_error_relogin">Błąd autoryzacji. Zaloguj się jeszcze raz.</string>
+    <string name="toast_select_dir">Wybierz folder</string>
+    <string name="toast_fill_fields">Uzupełnij pola</string>
+    <string name="toast_fill_name">Wprowadź nazwę</string>
+    
+    
+    <string name="da_title">@string/app_name</string>
+    <string name="da_info"> </string>
+
+</resources>

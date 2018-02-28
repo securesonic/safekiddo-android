@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+   	android:layout_height="match_parent"
+   	android:orientation="vertical"
+   	android:gravity="center">
+   	
+    <ScrollView
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        
+	    <RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:paddingBottom="@dimen/auth_header_top_padd"
+	         android:layout_gravity="center">
+	
+	         <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+	             android:id="@+id/textView1"
+	             style="@style/Text_Auth_Head"
+	             android:layout_width="match_parent"
+	             android:layout_height="wrap_content"
+	             android:layout_centerHorizontal="true"
+	             android:layout_marginBottom="@dimen/auth_header_bottom_padd"
+	             android:layout_marginTop="@dimen/auth_header_top_padd"
+	             android:text="@string/label_login_title"
+	             android:gravity="center" />
+	
+	         <LinearLayout 
+	             android:id="@+id/editLoginBox"
+	             android:layout_width="@dimen/max_width"
+	             android:layout_height="wrap_content"
+	             android:background="@drawable/pin_frame_bg"
+	             android:layout_below="@+id/textView1"
+		         android:layout_centerHorizontal="true"
+		         android:orientation="horizontal"
+		         android:layout_marginBottom="30dp">
+		         
+	             <ImageView 
+	                 android:id="@+id/editLoginIcon"
+	                 android:layout_width="40dp"
+		             android:layout_height="match_parent"
+		             android:layout_marginLeft="5dp"
+		             android:layout_marginTop="2dp"
+		             android:layout_marginBottom="2dp"
+		             android:src="@drawable/ic_action_login"
+		             android:scaleType="centerInside"
+		             android:paddingRight="5dp"
+		             android:layout_weight="0"
+		             android:background="@drawable/bg_with_right_line" 
+		             android:contentDescription="@string/app_name"/>
+	             
+	             <com.ardurasolutions.safekiddo.proto.view.EditTextHv
+		             android:id="@+id/editLogin"
+		             android:layout_width="0dp"
+		             android:layout_height="wrap_content"
+		             android:ems="10" 
+		             android:background="@drawable/trans"
+		             android:padding="10dp" 
+		             android:textColor="@color/sk_white"
+		             android:gravity="left|center_vertical"
+		             android:hint="@string/hint_login"
+		             android:textColorHint="@color/sk_white_alpha"
+		             android:singleLine="true"
+		             android:textSize="19sp"
+		             android:inputType="textEmailAddress"
+		             android:layout_weight="1"/>
+	             
+	         </LinearLayout>
+	
+	         <LinearLayout 
+	             android:id="@+id/editPassBox"
+	             android:layout_width="@dimen/max_width"
+	             android:layout_height="wrap_content"
+	             android:background="@drawable/pin_frame_bg"
+	             android:layout_below="@+id/editLoginBox"
+		         android:layout_centerHorizontal="true"
+		         android:orientation="horizontal"
+		         android:layout_marginBottom="30dp">
+	             
+	             <ImageView 
+	                 android:id="@+id/editPassIcon"
+	                 android:layout_width="40dp"
+		             android:layout_height="match_parent"
+		             android:layout_marginLeft="5dp"
+		             android:layout_marginTop="2dp"
+		             android:layout_marginBottom="2dp"
+		             android:src="@drawable/ic_action_password"
+		             android:scaleType="centerInside"
+		             android:paddingRight="5dp"
+		             android:layout_weight="0"
+		             android:background="@drawable/bg_with_right_line" 
+		             android:contentDescription="@string/app_name"/>
+	             
+		         <com.ardurasolutions.safekiddo.proto.view.EditTextHv
+		             android:id="@+id/editPass"
+		             android:layout_width="@dimen/max_width"
+		             android:layout_height="wrap_content"
+		             android:ems="10"
+		             android:inputType="textPassword"
+		             android:background="@drawable/trans"
+		             android:padding="10dp" 
+		             android:textColor="@color/sk_white"
+		             android:gravity="left|center_vertical"
+		             android:hint="@string/hint_pass"
+		             android:textColorHint="@color/sk_white_alpha"
+		             android:singleLine="true"
+		             android:textSize="19sp"
+		             android:layout_weight="1" />
+	         </LinearLayout>
+	         
+	         
+	         <com.ardurasolutions.safekiddo.proto.view.ButtonHv 
+	             style="@style/Auth_Button.White"
+	             android:id="@+id/buttonRight"
+	             android:layout_below="@+id/editPassBox"
+	             android:layout_centerHorizontal="true"
+	             android:text="@string/label_login" />
+	
+	     </RelativeLayout>
+    </ScrollView>
+    
+    <RelativeLayout 
+        android:id="@+id/progressOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@color/sk_black_alpha"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <com.ardurasolutions.safekiddo.proto.view.CircleProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

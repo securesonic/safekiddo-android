@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<color name="sk_desktop_remove_box_grad">#00000000</color>
+	<color name="sk_desktop_remove_box_grad_active1">#77ff0000</color>
+	<color name="sk_desktop_remove_box_grad_active2">#77ff0000</color>
+</resources> 

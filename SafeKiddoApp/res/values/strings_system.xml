@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="system_process_browser">:browser</string>
+	
+	<!-- 
+		DO NOT CHANGE THIS 
+		its system constants for safekiddo user in xml files
+	-->
+<!-- 	<string name="sync_account_type">com.ardurasolutions.safekiddo.sync</string> -->
+<!-- 	<string name="sync_authority_data">com.ardurasolutions.safekiddo.sync.data</string> -->
+<!-- 	<string name="authLabel">SafeKiddo</string> -->
+<!-- 	<string name="sync_receiver_label">SafeKiddo Sync</string> -->
+</resources>

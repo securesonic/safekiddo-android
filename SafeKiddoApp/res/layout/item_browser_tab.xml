@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/browser_tab_bg">
+	
+	<LinearLayout 
+	    android:id="@+id/title"
+	    android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/browser_tab_title_bg"
+        android:orientation="horizontal">
+        
+	    <TextView
+	        android:id="@+id/pageTitle"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:ellipsize="end"
+	        android:paddingLeft="15dp"
+	        android:singleLine="true"
+	        android:textColor="@color/sk_white"
+	        android:textSize="14sp"
+	        android:gravity="center_vertical"
+	        android:layout_weight="1" />
+	    
+	    <ImageView
+	        android:id="@+id/pageClose"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/browser_menu_item_bg"
+	        android:clickable="true"
+	        android:contentDescription="@string/app_name"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:paddingTop="3dp"
+	        android:paddingBottom="3dp"
+	        android:src="@drawable/ic_action_x_light" />
+	    
+	</LinearLayout>
+	
+	<ImageView
+        android:id="@+id/pageThumb"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/tab_switcher_thumb_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/title"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_launcher"
+        android:padding="15dp" />
+	
+</RelativeLayout>

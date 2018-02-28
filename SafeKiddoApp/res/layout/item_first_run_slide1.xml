@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/first_screen_button_padd">
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="@dimen/first_screen_logo_size"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/intro_logo" 
+        android:contentDescription="@string/app_name"/>
+
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageLogo"
+        android:layout_alignRight="@+id/imageLogo"
+        android:layout_below="@+id/imageLogo"
+        android:text="@string/label_slogan_casesens"
+        android:gravity="center"
+        android:textColor="#FF666666"
+        android:textSize="@dimen/first_screen_text_size"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:shadowColor="@color/sk_black_alpha"
+        android:paddingBottom="@dimen/first_screen_button_padd" />
+
+</RelativeLayout>

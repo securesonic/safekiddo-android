@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+	    android:id="@+id/headerText"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    style="@style/Text_Settings_Header"
+	    android:textStyle="normal"
+	    android:background="@drawable/history_header_bg" />
+
+</LinearLayout>

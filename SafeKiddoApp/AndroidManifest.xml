@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.ardurasolutions.safekiddo"
+	android:versionCode="14000064"
+	android:versionName="0.9.64" xmlns:tools="http://schemas.android.com/tools">
+	
+	<!-- 
+		WERSJONOWANIE
+		///////////////////////////////////
+		Wersja aplikacji dla systemu 2.x+ rozpoczyna się od numeru 10xxx
+		Wersja dla systemy 4.x+ rozpoczyna sie od numeru 14xxx
+		Przykład (wersja aplikacji numer 58): 
+		- system 2.3: 10000058
+		- system 3.2: 10000058
+		- system 4.0: 14000058
+		- system 4.4: 14000058
+		- itd...
+		///////////////////////////////////
+	-->
+
+	<uses-sdk
+		android:minSdkVersion="14"
+		android:targetSdkVersion="21" />
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<!--  
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO" />
+	-->
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.SET_WALLPAPER" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+	
+	<permission android:name="com.ardurasolutions.safekiddo.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="com.ardurasolutions.safekiddo.permission.C2D_MESSAGE" />
+	
+	<permission 
+		android:name="com.ardurasolutions.safekiddo.BROADCAST_PERMISSION" 
+		android:protectionLevel="normal" 
+		android:label="@string/label_permission_broadcast_permission"
+		android:description="@string/label_permission_broadcast_permission_desc"
+		android:icon="@drawable/ic_launcher"
+		android:logo="@drawable/ic_launcher" tools:ignore="UnusedAttribute"/>
+	<uses-permission android:name="com.ardurasolutions.safekiddo.BROADCAST_PERMISSION" />
+	
+	<uses-feature android:name="android.hardware.telephony" android:required="false" />
+	<uses-feature android:name="android.hardware.camera" android:required="false" />
+	<uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+	<uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+	<uses-feature android:name="android.hardware.camera.front" android:required="false" />
+	<uses-feature android:name="android.hardware.touchscreen"  android:required="false" />
+	<uses-feature android:name="android.hardware.wifi"  android:required="false" />
+	<uses-feature android:name="android.hardware.wifi.direct"  android:required="false" />
+	
+	<supports-screens
+		android:smallScreens="true" 
+		android:normalScreens="true" 
+		android:largeScreens="true" 
+		android:xlargeScreens="true" 
+		android:anyDensity="true" />
+
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/ic_launcher"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme" 
+		android:name="com.ardurasolutions.safekiddo.SafekiddoApp"
+		android:hardwareAccelerated="true" tools:ignore="UnusedAttribute">
+		<!-- android:largeHeap="true" -->
+		
+		<!-- Google Play Services -->
+		<!--  
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		-->
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.activities.FirstRunActivity"
+			android:windowSoftInputMode="adjustPan|stateHidden"
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:screenOrientation="portrait"
+			android:label="@string/app_name"
+			android:icon="@drawable/ic_launcher"
+			android:enabled="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.auth.AuthLogin"
+			android:windowSoftInputMode="adjustResize|stateHidden"
+			android:theme="@style/AppTheme_Auth"
+			android:screenOrientation="portrait" />
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.browser.BrowserMainActivity"
+			android:taskAffinity="com.ardurasolutions.safekiddo.browser.BroserProcess"
+			android:windowSoftInputMode="adjustResize"
+			android:theme="@style/BrowserAppTheme"
+			android:label="@string/browser_app_name"
+			android:icon="@drawable/ic_browser"
+			android:launchMode="singleTask"
+			android:process="@string/system_process_browser"
+			android:isolatedProcess="true"
+			android:configChanges="orientation|keyboard|screenSize"
+			android:alwaysRetainTaskState="true"
+			android:enabled="false" tools:ignore="UnusedAttribute">
+			
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+				<category android:name="android.intent.category.APP_BROWSER" />
+				<category android:name="android.intent.category.BROWSABLE" />
+			</intent-filter>
+			
+			<!-- browser -->
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="http"/>
+				<data android:scheme="https" />
+			</intent-filter>
+			
+		</activity>
+		
+		<activity 
+		    android:name="com.ardurasolutions.safekiddo.browser.BrowserPinActivity"
+		    android:process="@string/system_process_browser"
+		    android:theme="@style/AppTheme_NoTitleBar"
+			android:windowSoftInputMode="stateHidden"
+			android:noHistory="true"
+			android:excludeFromRecents="true" /><!--  -->
+		
+		<activity
+			android:name="com.ardurasolutions.safekiddo.launcher.Desktop"
+			android:exported="true"
+			android:launchMode="singleInstance"
+			android:clearTaskOnLaunch="true"
+			android:stateNotNeeded="true"
+			android:theme="@style/AppTheme_Desktop"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateUnspecified|adjustPan"
+			android:enabled="false"
+			android:configChanges="keyboardHidden|orientation|screenSize">
+			
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.HOME" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.MONKEY" />
+			</intent-filter> 
+			
+		</activity>
+		
+		<activity
+			android:name="com.ardurasolutions.safekiddo.browser.BrowserSettings" 
+			android:theme="@style/AppTheme_NoTitle"
+			android:process="@string/system_process_browser" />
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.activities.ParentAction" 
+			android:theme="@style/AppTheme_Auth"
+			android:exported="false"
+			android:excludeFromRecents="true"
+			android:noHistory="true"
+			android:windowSoftInputMode="stateHidden" />
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.activities.WebActivity" 
+			android:theme="@style/AppTheme_NoTitle"
+			android:windowSoftInputMode="stateHidden"
+			android:screenOrientation="portrait"
+			android:excludeFromRecents="true"
+			android:noHistory="true" />
+		<!-- @style/AppTheme_BackArrow -->
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.activities.DummyUserSettings" 
+			android:theme="@style/AppTheme_Transparent"
+			android:enabled="false"
+			android:label="@string/settings_app_name"
+			android:screenOrientation="portrait"
+			android:noHistory="true"
+			android:excludeFromRecents="true"
+			android:launchMode="singleTask" />
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.activities.UserSettings" 
+			android:theme="@style/AppTheme_NoTitle"
+			android:windowSoftInputMode="stateHidden"
+			android:screenOrientation="portrait"
+			android:label="@string/settings_app_name"
+			android:excludeFromRecents="true"
+			android:launchMode="singleTask" />
+		<!-- @style/AppTheme_WhiteBg -->
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.activities.UserSettingsChildProfile" 
+			android:theme="@style/AppTheme_NoTitle"
+			android:screenOrientation="portrait"
+			android:noHistory="true" />
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.activities.UserSettingsAppsManage" 
+			android:theme="@style/AppTheme_NoTitle"
+			android:windowSoftInputMode="stateHidden"
+			android:screenOrientation="portrait"
+			android:excludeFromRecents="true"
+			android:noHistory="true" />
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.auth.AuthPreview" 
+			android:theme="@style/AppTheme_Auth"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="adjustResize|stateHidden" />
+		
+		<activity 
+			android:name="com.ardurasolutions.safekiddo.dev.DevActivity"
+			android:enabled="false"
+			android:label="@string/dev_app_name"
+			android:screenOrientation="portrait"
+			android:noHistory="true"
+			android:icon="@drawable/ic_launcher_dev">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name="com.ardurasolutions.safekiddo.activities.PinActivity"
+			android:theme="@style/AppTheme_NoTitleBar"
+			android:windowSoftInputMode="stateHidden"
+			android:noHistory="true"
+			android:excludeFromRecents="true" />
+		
+		<activity android:name="com.ardurasolutions.safekiddo.browser.BrowserFavsActivity"
+			android:theme="@style/AppTheme_NoTitle"
+			android:windowSoftInputMode="stateHidden" />
+		
+		<activity android:name="com.ardurasolutions.safekiddo.launcher.WallpaperChooser"
+			android:theme="@style/AppTheme_BlackBg.NoTitle"
+			android:windowSoftInputMode="stateHidden"
+			android:noHistory="true"
+			android:screenOrientation="portrait" />
+		
+		<!-- DEVICE ADMIN -->
+		<receiver 
+			android:name="com.ardurasolutions.safekiddo.auth.SKAdmin" 
+			android:label="@string/da_title" 
+			android:description="@string/da_info" 
+			android:permission="android.permission.BIND_DEVICE_ADMIN"> 
+			<meta-data android:name="android.app.device_admin" android:resource="@xml/device_admin" /> 
+			<intent-filter> 
+				<action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+				<action android:name="android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED" />
+			</intent-filter> 
+		</receiver>
+
+		<!-- RECEVIERS -->
+		<receiver android:name="com.ardurasolutions.safekiddo.receviers.BootRecevier" android:exported="false">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<category android:name="android.intent.category.HOME" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.ardurasolutions.safekiddo.receviers.NetworkStateReceiver">
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="com.ardurasolutions.safekiddo.receviers.PackageInstall" android:enabled="false">
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_INSTALL" />
+				<action android:name="android.intent.action.PACKAGE_ADDED" />
+				<action android:name="android.intent.action.PACKAGE_REMOVED" />
+				<action android:name="android.intent.action.PACKAGE_CHANGED" />
+				<data android:scheme="package"/>
+			</intent-filter>
+		</receiver>
+		<!--  
+		<receiver
+			android:name="com.ardurasolutions.safekiddo.receviers.GcmBroadcastReceiver"
+			android:permission="com.google.android.c2dm.permission.SEND" >
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<category android:name="com.ardurasolutions.safekiddo" />
+			</intent-filter>
+		</receiver>
+		-->
+		<receiver 
+			android:name="com.ardurasolutions.safekiddo.receviers.HeartBeatBroadcastReceiver"
+			android:enabled="true"
+			android:exported="true"
+			android:permission="com.ardurasolutions.safekiddo.BROADCAST_PERMISSION" />
+		
+		<!-- PROVIDERS -->
+
+		<!-- SERVICES -->
+		<service 
+			android:name="com.ardurasolutions.safekiddo.services.ProxyService" 
+			android:exported="false" 
+			android:enabled="true"
+			android:process="@string/system_process_browser" />
+		<service
+			android:name="com.ardurasolutions.safekiddo.services.GuardService" 
+			android:exported="false" 
+			android:enabled="true" />
+		<service 
+			android:name="com.ardurasolutions.safekiddo.services.BrowserObserverService" 
+			android:exported="false" 
+			android:enabled="false"
+			android:permission="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+		<!-- 
+		<service 
+			android:name="com.ardurasolutions.safekiddo.services.GcmIntentService" />
+		 -->
+		<service 
+			android:name="com.ardurasolutions.safekiddo.services.HeartBeatIntentService" />
+		<service
+			android:name="com.ardurasolutions.safekiddo.services.PinService"
+			android:enabled="true" />
+
+	</application>
+
+</manifest>

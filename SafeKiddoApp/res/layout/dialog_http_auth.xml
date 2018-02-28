@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="20dp">
+
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_http_auth_info"
+        android:textSize="19sp"
+        android:paddingBottom="20dp"
+        android:textColor="@color/sk_black" />
+
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_login_name"
+        android:textSize="16sp"
+        android:textColor="@color/sk_black" />
+
+    <com.ardurasolutions.safekiddo.proto.view.EditTextHv
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:inputType="text"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/sk_black"
+        android:cursorVisible="true">
+
+        <requestFocus />
+        
+    </com.ardurasolutions.safekiddo.proto.view.EditTextHv>
+
+    <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_pass_name"
+        android:textSize="16sp"
+        android:textColor="@color/sk_black" />
+
+    <com.ardurasolutions.safekiddo.proto.view.EditTextHv
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/sk_black"
+        android:cursorVisible="true" />
+
+</LinearLayout>

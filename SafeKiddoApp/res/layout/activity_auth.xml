@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sk="http://schemas.android.com/apk/res/com.ardurasolutions.safekiddo"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/auth_tab_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        android:orientation="horizontal"
+        android:background="@color/sk_black_alpha" 
+        android:baselineAligned="false">
+        
+        <com.ardurasolutions.safekiddo.proto.view.CheckableLinearLayout
+            android:id="@+id/tab1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/tab_idicator"
+            sk:marked="true">
+            
+            <com.ardurasolutions.safekiddo.proto.view.CheckedTextViewHv
+	            android:layout_width="@dimen/auth_tab_indicator_size"
+	            android:layout_height="@dimen/auth_tab_indicator_size"
+	            android:text="@string/label_1"
+	            android:gravity="center"
+	            android:textColor="@color/orange_selected"
+	            android:textSize="@dimen/auth_tab_indicator_text_size"
+	            android:background="@drawable/white_ball" />
+            
+        </com.ardurasolutions.safekiddo.proto.view.CheckableLinearLayout>
+        
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="@color/sk_blue_dark3"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+        
+        <com.ardurasolutions.safekiddo.proto.view.CheckableLinearLayout
+            android:id="@+id/tab2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/tab_idicator"
+            sk:marked="false">
+            
+            <com.ardurasolutions.safekiddo.proto.view.CheckedTextViewHv
+	            android:layout_width="@dimen/auth_tab_indicator_size"
+	            android:layout_height="@dimen/auth_tab_indicator_size"
+	            android:text="@string/label_2"
+	            android:gravity="center"
+	            android:textColor="@color/orange_selected"
+	            android:textSize="@dimen/auth_tab_indicator_text_size"
+	            android:background="@drawable/white_ball" />
+            
+        </com.ardurasolutions.safekiddo.proto.view.CheckableLinearLayout>
+        
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="@color/sk_blue_dark3"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+        
+        <com.ardurasolutions.safekiddo.proto.view.CheckableLinearLayout
+            android:id="@+id/tab3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/tab_idicator"
+            sk:marked="false">
+            
+            <com.ardurasolutions.safekiddo.proto.view.CheckedTextViewHv
+	            android:layout_width="@dimen/auth_tab_indicator_size"
+	            android:layout_height="@dimen/auth_tab_indicator_size"
+	            android:text="@string/label_3"
+	            android:gravity="center"
+	            android:textColor="@color/orange_selected"
+	            android:textSize="@dimen/auth_tab_indicator_text_size"
+	            android:background="@drawable/white_ball" />
+            
+        </com.ardurasolutions.safekiddo.proto.view.CheckableLinearLayout>
+        
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="@color/sk_blue_dark3"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone"/>
+        
+        <com.ardurasolutions.safekiddo.proto.view.CheckableLinearLayout
+            android:id="@+id/tab4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/tab_idicator"
+            sk:marked="false"
+            android:visibility="gone">
+            
+            <CheckedTextView
+	            android:layout_width="@dimen/auth_tab_indicator_size"
+	            android:layout_height="@dimen/auth_tab_indicator_size"
+	            android:text="@string/label_4"
+	            android:gravity="center"
+	            android:textColor="@color/orange_selected"
+	            android:textSize="@dimen/auth_tab_indicator_text_size"
+	            android:background="@drawable/white_ball" />
+            
+        </com.ardurasolutions.safekiddo.proto.view.CheckableLinearLayout>
+        
+    </LinearLayout>
+    
+    <FrameLayout 
+        android:id="@+id/content" 
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar">
+    </FrameLayout>
+
+</RelativeLayout>

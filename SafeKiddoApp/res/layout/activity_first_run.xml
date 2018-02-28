@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <ImageView
+        android:id="@+id/imageBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/family"
+        android:scaleType="centerCrop" 
+        android:contentDescription="@string/app_name"/>
+    
+    <com.ardurasolutions.safekiddo.launcher.views.DesktopPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000" />
+ 
+ 	<com.ardurasolutions.safekiddo.launcher.views.DesktopPagerIndicator 
+ 	    android:id="@+id/bottomBoxIndicator"
+ 	    android:layout_above="@+id/bottomBox"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="7dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="@dimen/first_screen_button_padd"/>
+ 
+ 	<LinearLayout
+ 	    android:id="@+id/bottomBox"
+ 	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/first_screen_button_padd"
+        android:paddingRight="@dimen/first_screen_button_padd"
+        android:paddingBottom="@dimen/first_screen_button_padd"
+        android:paddingTop="5dp"
+        android:gravity="center_horizontal">
+        
+ 	    <com.ardurasolutions.safekiddo.proto.view.ButtonHv
+	        android:id="@+id/button1"
+	        style="@style/Auth_Button.Orange"
+	        android:layout_width="@dimen/first_screen_button_size"
+	        android:layout_height="wrap_content"
+	        android:onClick="handleRegister"
+	        android:text="@string/label_create_account" />
+ 	    
+ 	    <View 
+ 	        android:layout_width="@dimen/first_screen_button_padd"
+	        android:layout_height="10dp"/>
+ 	    
+ 	    <com.ardurasolutions.safekiddo.proto.view.ButtonHv
+            style="@style/Auth_Button.White"
+            android:id="@+id/button2"
+            android:layout_width="@dimen/first_screen_button_size"
+            android:layout_height="wrap_content"
+            android:text="@string/label_login"
+            android:onClick="handleLogin" />
+ 	    
+ 	</LinearLayout>
+
+    
+
+</RelativeLayout>

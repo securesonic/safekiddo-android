@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sk_blue"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ProgressBar
+                android:id="@+id/loadProgress"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/titleIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_world" />
+
+            <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/titleIcon"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textColor="@color/sk_white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleBar"
+            android:background="@color/sk_blue"
+            android:orientation="horizontal" 
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/actionBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/browser_toolbar_icon_bg"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/ic_action_back_white"
+                android:visibility="gone" />
+
+            <com.ardurasolutions.safekiddo.proto.view.AutoCompleteTextViewHv
+                android:id="@+id/urlText"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/browser_edit_bg"
+                android:drawableLeft="@drawable/ic_world_url_2a"
+                android:drawablePadding="0dp"
+                android:ems="10"
+                android:gravity="center_vertical|left"
+                android:imeOptions="actionGo|actionSend"
+                android:inputType="textUri"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/sk_black"
+                android:textSize="16sp"
+                android:hint="@string/label_enter_url_or_search"
+                android:textColorHint="@color/sk_black_alpha"
+                android:ellipsize="end" />
+
+            <ImageView
+                android:id="@+id/actionStopRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/browser_toolbar_icon_bg"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/ic_action_refresh_light" />
+
+            <View
+                android:id="@+id/actionMenuDivider"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#22FFFFFF"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/actionMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/browser_toolbar_icon_bg"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/ic_action_overflow"
+                android:visibility="gone" />
+        </LinearLayout>
+        
+        <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+			android:id="@+id/toolbarProgressView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			style="@style/SKProgressBar" />
+
+        <com.ardurasolutions.safekiddo.browser.proto.WebViewHv
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomToolbar"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/toolbar" />
+
+        <LinearLayout
+            android:id="@+id/webViewLoadOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/toolbar"
+            android:background="#FFFFFFFF"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.ardurasolutions.safekiddo.browser.proto.WebViewHv
+            android:id="@+id/webViewContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/toolbar"
+            android:layout_above="@+id/bottomToolbar"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/webViewOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/toolbar"
+            android:background="#77000000"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+        
+        <LinearLayout
+            android:id="@+id/bottomToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/browser_bottom_toolbar_bg"
+            android:orientation="horizontal"
+            android:paddingTop="1dp" >
+
+            <ImageView
+                android:id="@+id/bottomToolbarBack"
+                style="@style/Button_Browser_Bottom_Bar"
+                android:src="@drawable/ic_action_back_full"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/bottomToolbarNext"
+                style="@style/Button_Browser_Bottom_Bar"
+                android:src="@drawable/ic_action_next_full"
+                tools:ignore="ContentDescription" />
+            
+            <ImageView
+                android:id="@+id/bottomToolbarWindows"
+                style="@style/Button_Browser_Bottom_Bar"
+                android:src="@drawable/ic_windows_full"
+                tools:ignore="ContentDescription" />
+            
+            <ImageView
+                android:id="@+id/bottomToolbarFavsAdd"
+                style="@style/Button_Browser_Bottom_Bar"
+                android:src="@drawable/ic_action_star_add_full"
+                tools:ignore="ContentDescription" />
+            
+            <ImageView
+                android:id="@+id/bottomToolbarMore"
+                style="@style/Button_Browser_Bottom_Bar"
+                android:src="@drawable/ic_action_overflow_full"
+                tools:ignore="ContentDescription" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/historyListBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/sk_white"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal" >
+
+                <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/label_history"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sk_menu_sel"
+                android:visibility="gone" />
+
+            <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+                android:id="@+id/historyList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/list_divider"
+				android:dividerHeight="1dp" />
+
+            <com.ardurasolutions.safekiddo.proto.view.ButtonHv
+                android:id="@+id/buttonCLearHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/blue_btn_bg"
+                android:padding="10dp"
+                android:text="@string/label_clear_history"
+                android:textColor="@color/sk_white"
+                android:textSize="16sp" />
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+    <FrameLayout
+        android:id="@+id/fullscreenCustomContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+    </FrameLayout>
+
+</RelativeLayout>

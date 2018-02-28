@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ardurasolutions.safekiddo.proto.view.CheckedTextViewHv xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:drawablePadding="4dp"
+    android:gravity="center_vertical|left"
+    android:background="@drawable/browser_menu_item_bg"
+    android:clickable="true"
+    android:textColor="@color/standard_text" /><!-- android:drawableLeft="@drawable/ic_action_remove" -->

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	    android:focusableInTouchMode="true">
+	
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="DATABASE"
+	        android:padding="10dp"
+	        android:background="#22000000" />
+	    
+	    <Button
+	        android:id="@+id/button1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Copy DB on SDCard"
+	        android:onClick="handleCopyDb"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_marginBottom="15dp"
+	        android:layout_marginTop="15dp" />
+	
+	    <TextView
+	        android:id="@+id/textView1head"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="SAFEKIDDO SERVER"
+	        android:padding="10dp"
+	        android:background="#22000000"
+	        android:visibility="gone" />
+	    
+	    <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" 
+		    android:paddingLeft="15dp"
+		    android:paddingRight="15dp"
+		    android:paddingBottom="15dp"
+		    android:visibility="gone">
+		
+		    <Spinner
+		        android:id="@+id/spinner1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+		
+		    <EditText
+		        android:id="@+id/editText1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:inputType="textEmailAddress"
+		        android:visibility="gone" />
+		
+		    <Button
+		        android:id="@+id/button2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="SAVE"
+		        android:onClick="handleSaveServer" />
+	    </LinearLayout>
+	    
+	    <TextView
+	        android:id="@+id/textView5head"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="SAFEKIDDO BROWSER"
+	        android:padding="10dp"
+	        android:background="#22000000" />
+	    
+	    <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" 
+		    android:paddingLeft="15dp"
+		    android:paddingRight="15dp"
+		    android:paddingBottom="15dp"
+		    android:paddingTop="15dp">
+	
+	        <CheckBox
+	            android:id="@+id/checkBoxWVDebug"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Enable WebView content debug (browser restart)" />
+		    
+	    </LinearLayout>
+	    
+	    <TextView
+	        android:id="@+id/textView6head"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="MISC"
+	        android:padding="10dp"
+	        android:background="#22000000" />
+	    
+	    <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" 
+		    android:paddingLeft="15dp"
+		    android:paddingRight="15dp"
+		    android:paddingBottom="15dp"
+		    android:paddingTop="15dp">
+	
+	        <Button
+	            android:id="@+id/button3"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Remove all desktop config"
+	            android:onClick="handleRemoveDesktopConfig" />
+	        
+	        <Button
+	            android:id="@+id/button4"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:onClick="handleRemoveCurrentChild"
+	            android:text="Remove current child" />
+	        
+	        <Button
+	            android:id="@+id/button5"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:onClick="handleRemoveSession"
+	            android:text="Clear session" />
+	        
+	        <Button
+	            android:id="@+id/button6"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:onClick="handleLogoutFlag"
+	            android:text="Set logout flag to TRUE" />
+	        
+	        <Button
+	            android:id="@+id/button7"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:onClick="handleCheckProxy"
+	            android:text="Check PROXY" />
+	        
+	        <Button
+	            android:id="@+id/button8"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:onClick="handleRunHeartBeat"
+	            android:text="Run HeartBeat now" />
+		    
+	    </LinearLayout>
+	    
+	    <TextView
+	        android:id="@+id/textView7head"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="APP MODE"
+	        android:padding="10dp"
+	        android:background="#22000000" />
+	    
+	    <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" 
+		    android:paddingLeft="15dp"
+		    android:paddingRight="15dp"
+		    android:paddingBottom="15dp"
+		    android:paddingTop="15dp">
+
+	        <TextView
+	            android:id="@+id/textView2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />
+		    
+	    </LinearLayout>
+	    
+	    <TextView
+	        android:id="@+id/textView8head"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="SERVER PROXY"
+	        android:padding="10dp"
+	        android:background="#22000000" />
+	    
+	    <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" 
+		    android:paddingLeft="15dp"
+		    android:paddingRight="15dp"
+		    android:paddingBottom="15dp"
+		    android:paddingTop="15dp">
+
+	        <TextView
+	            android:id="@+id/textView3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />
+		    
+	    </LinearLayout>
+	    
+	</LinearLayout>
+</ScrollView>

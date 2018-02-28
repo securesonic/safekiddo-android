@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<RelativeLayout
+		android:id="@+id/desktopBox"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="visible"
+		android:fitsSystemWindows="true">
+
+		<com.ardurasolutions.safekiddo.launcher.views.DesktopPager
+			android:id="@+id/pager"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_above="@+id/pagerIndicator" />
+
+		<com.ardurasolutions.safekiddo.launcher.views.DesktopPagerIndicator 
+			android:id="@+id/pagerIndicator"
+			android:layout_width="match_parent"
+			android:layout_height="10dp"
+			android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"
+			android:layout_above="@+id/allAppsButton2"/>
+
+		<ImageView
+	        android:id="@+id/allAppsButton2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/ic_allapps_icon"
+	        android:clickable="true"
+	        android:padding="@dimen/all_apps_button_padding" 
+	        android:contentDescription="@string/app_name" />
+	    
+	    <com.ardurasolutions.safekiddo.launcher.views.DesktopView
+	        android:id="@+id/desktopFastBarLeft"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignTop="@+id/allAppsButton2"
+	        android:layout_toLeftOf="@+id/allAppsButton2"
+	        android:tag="left" />
+	    
+	    <com.ardurasolutions.safekiddo.launcher.views.DesktopView
+	        android:id="@+id/desktopFastBarRight"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignTop="@+id/allAppsButton2"
+	        android:layout_toRightOf="@+id/allAppsButton2"
+	        android:tag="right" />
+	    
+	    <LinearLayout
+            android:id="@+id/demoveApp"
+            android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_alignParentTop="true"
+		    android:gravity="center"
+		    android:padding="10dp"
+		    android:background="@drawable/delete_view_bg"
+		    android:visibility="gone">
+
+	        <TextView
+	            android:id="@+id/textView2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/label_delete"
+	            android:textColor="#FFFFFFFF"
+	            android:drawableLeft="@drawable/ic_action_discard"
+	            android:drawablePadding="5dp"
+	            android:gravity="center" />
+            
+        </LinearLayout>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/allAppsBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone">
+        
+        <LinearLayout
+            android:id="@+id/allAppsToolbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:background="#FF000000"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentLeft="true">
+
+            <com.ardurasolutions.safekiddo.proto.view.TextViewHv
+                android:id="@+id/textTitle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/label_app_list"
+                android:padding="15dp"
+                android:textColor="#FFFFFFFF"
+                android:layout_weight="1"
+                android:gravity="center_vertical" />
+            
+            <com.ardurasolutions.safekiddo.proto.view.EditTextHv
+                android:id="@+id/searchEdit"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:padding="15dp"
+                android:textColor="#FFFFFFFF"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="#00000000"
+                android:inputType="text"
+                android:visibility="gone"
+                android:imeOptions="actionSearch" />
+            
+            <ImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_search"
+                android:scaleType="centerInside"
+                android:padding="5dp" 
+                android:contentDescription="@string/label_search_app"
+                android:clickable="true"
+                android:background="@drawable/browser_toolbar_icon_bg" />
+
+            <ImageView
+                android:id="@+id/btnMoreActions"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/abc_ic_menu_moreoverflow_normal_holo_dark"
+                android:scaleType="centerInside"
+                android:padding="5dp" 
+                android:contentDescription="@string/app_name"
+                android:clickable="true"
+                android:background="@drawable/browser_toolbar_icon_bg"
+                android:visibility="visible" />
+	        
+	    </LinearLayout>
+
+        <com.ardurasolutions.safekiddo.launcher.views.AllAppsGrid
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="#00000000"
+            android:stretchMode="columnWidth"
+            android:scrollbars="none"
+            android:layout_below="@+id/allAppsToolbar"
+            android:layout_above="@+id/gridBottomBar" />
+        <!-- android:numColumns="5"  -->
+        
+        <LinearLayout
+            android:id="@+id/gridBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/sk_black"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/allAppsBoxOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+	        android:layout_alignParentLeft="true"
+	        android:gravity="center"
+	        android:clickable="true"
+	        android:orientation="vertical"
+	        android:visibility="gone">
+            
+            <com.ardurasolutions.safekiddo.proto.view.CircleProgressBar
+	            android:id="@+id/allAppsBoxOverlayProgress"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>
